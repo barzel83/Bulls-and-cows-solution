@@ -8,7 +8,7 @@ def one_bull(number):
     print("Original number: ", number)
 
     a=i
-    for b in range(10):
+    for b in range(10):#1 digit=bull
         if b!=a and b!=j and b!=k and b!=l:
             for c in range(10):
                 if c!=a and c!=b and c!=j and c!=k and c!=l:
@@ -17,7 +17,7 @@ def one_bull(number):
                             #print(f"{counter}: {a}{b}{c}{d}" )
                             counter+=1
     b=j
-    for a in range(10):
+    for a in range(10):#2 digit=bull
         if a!=b and a!=i and a!=k and a!=l:
             for c in range(10):
                 if c!=a and c!=b and c!=i and c!=k and c!=l:
@@ -26,7 +26,7 @@ def one_bull(number):
                             #print(f"{counter}: {a}{b}{c}{d}" )
                             counter+=1
     c=k
-    for a in range(10):
+    for a in range(10):#3 digit=bull
         if a!=c and a!=i and a!=j and a!=l:
             for b in range(10):
                 if b!=a and b!=c and b!=i and b!=j and b!=l:
@@ -36,8 +36,8 @@ def one_bull(number):
                             counter+=1
 
     d=l
-    print(f"{i}{j}{k}{l}")
-    for a in range(10):
+
+    for a in range(10):#4 digit is bull
         if a!=d and a!=i and a!=j and a!=k:
             for b in range(10):
                 if b!=a and b!=d and b!=i and b!=j and b!=k:
@@ -45,7 +45,7 @@ def one_bull(number):
                         if c!=a and c!=b and c!=d and c!=i and c!=j and c!=k:
                             #print(f"{counter}: {a}{b}{c}{d}" )
                             counter+=1
-    print(f"Total no bulls and cows {counter-1} numbers")#480
+    print(f"Total one bull {counter-1} numbers")#480
 
 def no_bulls_no_cows(number):
     array=[0]*4
@@ -85,6 +85,61 @@ def three_bulls(number):
                 print("#", counter, ": ", array)
                 counter+=1
     print(f"3 bulls: there are {counter-1} numbers")#24
+
+def two_bulls(number):
+    print(f"Options for 2 bulls for {number}: ")
+
+    counter = 1
+    i=number[0]
+    j=number[1]
+    k=number[2]
+    l=number[3]
+
+
+    for a in range(10):#bulls digit1 and digit2
+        if a!=i and a!=j and a!=k and a!=l:
+           for b in range(10):
+               if b!=i and b!=j and b!=k and b!=l and b!=a:
+                   print(i,j,a,b)
+                   counter+=1
+
+    for a in range(10):#bulls digit1 and digit3
+       if a!=i and a!=j and a!=k and a!=l:
+           for b in range(10):
+               if b!=i and b!=j and b!=k and b!=l and b!=a:
+                   print(i,a,k,b)
+                   counter+=1
+
+    for a in range(10):#bulls digit1 and digit4
+       if a!=i and a!=j and a!=k and a!=l:
+           for b in range(10):
+               if b!=i and b!=j and b!=k and b!=l and b!=a:
+                   print(i,a,b,l)
+                   counter+=1
+
+    for a in range(10):  # bulls digit2 and digit3
+        if a != i and a != j and a != k and a != l:
+            for b in range(10):
+                if b != i and b != j and b != k and b != l and b != a:
+                    print(i, j, k, b)
+                    counter += 1
+
+    for a in range(10):  # bulls digit2 and digit4
+        if a != i and a != j and a != k and a != l:
+            for b in range(10):
+                if b != i and b != j and b != k and b != l and b != a:
+                    print(a, j, b, l)
+                    counter += 1
+
+    for a in range(10):  # bulls digit3 and digit4
+        if a != i and a != j and a != k and a != l:
+            for b in range(10):
+                if b != i and b != j and b != k and b != l and b != a:
+                    print(a, b, k, l)
+                    counter += 1
+
+    print(f"2 bulls: there are {counter-1} numbers")#24
+
 
 def two_bull_two_cows(number):
     print(f"Options for 2 bulls and 2 cows for {number}: ")
@@ -130,6 +185,126 @@ def four_cows(number):
                                 counter+=1
 
     print(f"4 cows: there are  {counter -1} numbers")#9
+
+def one_cow(number):
+    print(f"Options for 1 cow for {number}: ")
+    counter=1
+    i=number[0]#1
+    j=number[1]#2
+    k=number[2]#3
+    l=number[3]#4
+
+    for a in range(10):#cow digit1 from place2
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and  b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(j,a,b,c )
+                            counter+=1
+    print(f"{counter}")
+
+    for a in range(10):#cow digit1 from place3
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(k,a,b,c )
+                            counter+=1
+
+    for a in range(10):#cow digit1 from place4
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(l,a,b,c )
+                            counter+=1
+
+    for a in range(10):#cow digit2 from place1
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,i,b,c )
+                            counter+=1
+
+    for a in range(10):#cow digit2 from place3
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,k,b,c )
+                            counter+=1
+
+    for a in range(10):#cow digit2 from place4
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,l,b,c )
+                            counter+=1
+
+    for a in range(10):#cow digit3 from place1
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,b,i,c )
+                            counter+=1
+
+    for a in range(10):#cow digit3 from place2
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,b,j,c )
+                            counter+=1
+
+    for a in range(10):#cow digit3 from place4
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,b,l,c )
+                            counter+=1
+
+    for a in range(10):#cow digit4 from place1
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,b,c,i )
+                            counter+=1
+
+
+    for a in range(10):#cow digit4 from place2
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,b,c,j )
+                            counter+=1
+
+
+    for a in range(10):#cow digit4 from place3
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k  and b!=l:
+                    for c in range(10):
+                        if c!=a and c!=b and c!=i and c!=j and c!=k and c!=l:
+                            #print(a,b,c, k )
+                            counter+=1
+    print(f"There are {counter-1} one cow ")#1440 units
 
 
 def two_bulls_one_cow(number):
@@ -186,11 +361,16 @@ def bull_3_cows(number):
 
 
 number=[1,2,3,4]
-#one_bull(number)
-no_bulls_no_cows(number)
-#three_bulls(number)
-#four_cows(number)
-#two_bull_two_cows(number)
-#two_bulls_one_cow(number)
-#bull_3_cows(number)
-#four_cows(number)
+#two_bull_two_cows(number)#6
+#bull_3_cows(number)#8
+#four_cows(number)#9
+#three_bulls(number)#24
+#two_bulls_one_cow(number)#72
+#two_bulls(number)#180
+#bull_2_cows(number)#216
+#three_cows(number)#264
+#no_bulls_no_cows(number)#360
+#one_bull(number)#480
+#bull_one_cow(number)#720
+#two_cows(number)#1260
+one_cow(number)#1440
