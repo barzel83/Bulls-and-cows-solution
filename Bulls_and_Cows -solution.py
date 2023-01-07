@@ -1,3 +1,707 @@
+def two_cows(number):
+    i=number[0]
+    j=number[1]
+    k=number[2]
+    l=number[3]
+    counter = 1
+    print("Original number: ", number)
+
+    a=l
+    d=k
+    for b in range(10):#4c 65 3c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    d=j
+    for b in range(10):#4c 65 2c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    d=i
+    for b in range(10):#4c 65 1c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    d=i
+    for b in range(10):#3c 65 1c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    d=j
+    for b in range(10):#3c 65 2c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    d=k
+    for b in range(10):#2c 65 3c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    d=i
+    for b in range(10):#2c 65 1c
+        if b!=i and b!=j and b!=k and b!=l:
+            for c in range(10):
+                if c!=b and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    c=j
+    for b in range(10):#4c 6 2c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    c=i
+    for b in range(10):#4c 6 1c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    c=j
+    for b in range(10):#3c 6 2c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    c=i
+    for b in range(10):#3c 6 1c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    c=l
+    for b in range(10):#3c 6 4c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    c=i
+    for b in range(10):#2c 6 1c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    c=l
+    for b in range(10):#2c 6 4c 5
+        if b!=i and b!=j and b!=k and b!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1                    
+
+    a=l
+    b=i
+    for c in range(10):#4c 1c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=k
+    for c in range(10):#4c 3c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=i
+    for c in range(10):#3c 1c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+
+    a=k
+    b=l
+    for c in range(10):#3c 4c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=k
+    for c in range(10):#2c 3c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=i
+    for c in range(10):#2c 1c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=l
+    for c in range(10):#2c 4c 65
+        if c!=i and c!=j and c!=k and c!=l:
+            for d in range(10):
+                if d!=b and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    c=i
+    d=j
+    for a in range(10):#65 1c 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    c=j
+    d=i
+    for a in range(10):#65 2c 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    c=j
+    d=k
+    for a in range(10):#65 2c 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    c=i
+    d=k
+    for a in range(10):#65 1c 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    c=l
+    d=i
+    for a in range(10):#65 4c 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    c=l
+    d=j
+    for a in range(10):#65 4c 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for b in range(10):
+                if b!=a and b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=i
+    d=k
+    for a in range(10):#6 1c 5 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for c in range(10):
+                if c!=a and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=k
+    d=i
+    for a in range(10):#6 3c 5 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for c in range(10):
+                if c!=a and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=k
+    d=j
+    for a in range(10):#6 3c 5 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for c in range(10):
+                if c!=a and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=i
+    d=j
+    for a in range(10):#6 1c 5 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for c in range(10):
+                if c!=a and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=l
+    d=j
+    for a in range(10):#6 4c 5 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for c in range(10):
+                if c!=a and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=l
+    d=i
+    for a in range(10):#6 4c 5 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+            for c in range(10):
+                if c!=a and c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=k
+    c=i
+    for a in range(10):#6 3c 1c 5 
+        if a!=i and a!=j and a!=k and a!=l:
+            for d in range(10):
+                if d!=a and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=k
+    c=j
+    for a in range(10):#6 3c 2c 5 
+        if a!=i and a!=j and a!=k and a!=l:
+            for d in range(10):
+                if d!=a and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=k
+    c=l
+    for a in range(10):#6 3c 4c 5 
+        if a!=i and a!=j and a!=k and a!=l:
+            for d in range(10):
+                if d!=a and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    b=i
+    c=k
+    for a in range(10):#6 1c 4c 5 
+        if a!=i and a!=j and a!=k and a!=l:
+            for d in range(10):
+                if d!=a and d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    print(f"Total two cows {counter-1} numbers")
+
+def three_cows(number):
+    array=[0]*4
+    i=number[0]#1
+    j=number[1]#2
+    k=number[2]#3
+    l=number[3]#4
+    counter = 1
+    print("Original number: ", number)
+
+    a=l
+    c=j
+    d=k
+    for b in range(10):#4c x 2c 3c  
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+    a=l
+    c=i
+    d=j
+    for b in range(10):#4c x 1c 2c  
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    c=j
+    d=i
+    for b in range(10):#4c x 2c 1c  
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    c=i
+    d=k
+    for b in range(10):#4c x 1c 3c  
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+    a=k
+    c=j
+    d=i
+    for b in range(10):#3c x 2c 1c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    c=i
+    d=j
+    for b in range(10):#3c x 1c 2c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    a=k
+    c=l
+    d=i
+    for b in range(10):#3c x 4c 1c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    c=l
+    d=j
+    for b in range(10):#3c x 4c 2c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    c=l
+    d=k
+    for b in range(10):#2c x 4c 3c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    c=l
+    d=i
+    for b in range(10):#2c x 4c 1c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    a=j
+    c=i
+    d=k
+    for b in range(10):#2c x 1c 3c 
+        if b!=i and b!=j and b!=k and b!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=i
+    c=j
+    d=k
+    for a in range(10):#x 1c 2c 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=i
+    c=l
+    d=k
+    for a in range(10):#x 1c 4c 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    b=k
+    c=l
+    d=i
+    for a in range(10):#x 3c 4c 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=l
+    c=i
+    d=k
+    for a in range(10):#x 4c 1c 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=l
+    c=i
+    d=j
+    for a in range(10):#x 4c 1c 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    b=k
+    c=j
+    d=i
+    for a in range(10):#x 3c 2c 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+    b=k
+    c=l
+    d=j
+    for a in range(10):#x 3c 4c 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=i
+    c=l
+    d=j
+    for a in range(10):#x 1c 4c 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    b=l
+    c=j
+    d=k
+    for a in range(10):#x 4c 2c 3c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+    b=l
+    c=j
+    d=i
+    for a in range(10):#x 4c 2c 1c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    b=k
+    c=i
+    d=j
+    for a in range(10):#x 3c 1c 2c 
+        if a!=i and a!=j and a!=k and a!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=i
+    d=k
+    for c in range(10):#4c 1c x 3c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=k
+    d=i
+    for c in range(10):#4c 3c x 1c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=k
+    d=j
+    for c in range(10):#4c 3c x 2c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=i
+    d=j
+    for c in range(10):#4c 1c x 2c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=l
+    d=j
+    for c in range(10):#3c 4c x 2c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=l
+    d=i
+    for c in range(10):#3c 4c x 1c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=i
+    d=j
+    for c in range(10):#3c 1c x 2c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=l
+    d=i
+    for c in range(10):#2c 4c x 1c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=l
+    d=k
+    for c in range(10):#2c 4c x 3c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=i
+    d=k
+    for c in range(10):#2c 1c x 3c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=k
+    d=i
+    for c in range(10):#2c 3c x 1c 
+        if c!=i and c!=j and c!=k and c!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=i
+    c=j
+    for d in range(10):#4c 1c 2c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    a=l
+    b=k
+    c=i
+    for d in range(10):#4c 3c 1c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=l
+    b=k
+    c=j
+    for d in range(10):#4c 3c 2c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=i
+    c=l
+    for d in range(10):#3c 1c 4c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=l
+    c=j
+    for d in range(10):#3c 4c 2c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=l
+    c=i
+    for d in range(10):#3c 4c 1c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=k
+    b=i
+    c=j
+    for d in range(10):#3c 1c 2c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=k
+    c=i
+    for d in range(10):#2c 3c 1c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=i
+    c=l
+    for d in range(10):#2c 1c 4c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=k
+    c=l
+    for d in range(10):#2c 3c 4c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+
+    a=j
+    b=l
+    c=i
+    for d in range(10):#2c 4c 1c x  
+        if d!=i and d!=j and d!=k and d!=l:
+                    print(f"{counter}: {a}{b}{c}{d}" )
+                    counter+=1
+                    
+    print(f"Total three cows {counter-1} numbers")
+
+
 def one_bull_two_cows(number):
     i = number[0]  # 1
     j = number[1]  # 2
@@ -893,5 +1597,3 @@ three_cows(number)#264
 #one_bull_one_cow(number)#720
 #two_cows(number)#1260
 #one_cow(number)#1440
-
-
