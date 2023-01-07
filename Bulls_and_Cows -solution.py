@@ -1091,57 +1091,56 @@ def three_bulls(number):
 
 def two_bulls(number):
     print(f"Options for 2 bulls for {number}: ")
-
+    two_bulls_array=[]
     counter = 1
     i=number[0]
     j=number[1]
     k=number[2]
     l=number[3]
 
-
     for a in range(10):#bulls digit1 and digit2
         if a!=i and a!=j and a!=k and a!=l:
            for b in range(10):
                if b!=i and b!=j and b!=k and b!=l and b!=a:
-                   print(i,j,a,b)
+                   two_bulls_array.append(convert_2_number(i,j,a,b))
                    counter+=1
 
     for a in range(10):#bulls digit1 and digit3
        if a!=i and a!=j and a!=k and a!=l:
            for b in range(10):
                if b!=i and b!=j and b!=k and b!=l and b!=a:
-                   print(i,a,k,b)
+                   two_bulls_array.append(convert_2_number(i, a, k, b))
                    counter+=1
 
     for a in range(10):#bulls digit1 and digit4
        if a!=i and a!=j and a!=k and a!=l:
            for b in range(10):
                if b!=i and b!=j and b!=k and b!=l and b!=a:
-                   print(i,a,b,l)
+                   two_bulls_array.append(convert_2_number(i, a, b, l))
                    counter+=1
 
     for a in range(10):  # bulls digit2 and digit3
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != i and b != j and b != k and b != l and b != a:
-                    print(i, j, k, b)
+                    two_bulls_array.append(convert_2_number(a, j, k, b))
                     counter += 1
 
     for a in range(10):  # bulls digit2 and digit4
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != i and b != j and b != k and b != l and b != a:
-                    print(a, j, b, l)
+                    two_bulls_array.append(convert_2_number(a, j, b, l))
                     counter += 1
 
     for a in range(10):  # bulls digit3 and digit4
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != i and b != j and b != k and b != l and b != a:
-                    print(a, b, k, l)
+                    two_bulls_array.append(convert_2_number(a, b, k, l))
                     counter += 1
-
-    print(f"2 bulls: there are {counter-1} numbers")#24
+    print("two_bulls_array: ",two_bulls_array)
+    print(f"2 bulls: there are {counter-1} numbers")#180
 
 def two_bull_two_cows(number):
     print(f"Options for 2 bulls and 2 cows for {number}: ")
