@@ -1472,26 +1472,24 @@ def two_bulls_one_cow(number):
     print(two_bulls_one_cow_array)
     print(f"There are {counter-1} in 2 bulls and one cow ")#72 units
 
-def bull_3_cows(number):
+def one_bull_3_cows(number):
     print(f"Options for one bull and 3 cows for {number}: ")
     counter=1
-    values = [[],[],[],[],[],[],[],[]]
+    one_bull_3_cows_array = []
     i=number[0]#1
     j=number[1]#2
     k=number[2]#3
     l=number[3]#4
 
-    values[0] = [i,k,l,j]#1342
-    values[1] = [i,l,j,k]#1423
-    values[2] = [k,j,l,i]#3241
-    values[3] = [l,j,i,k]#4213
-    values[4] = [j,l,k,i]#2431
-    values[5] = [l,i,k,j]#4132
-    values[6] = [j, k, i, l]  # 2314
-    values[7] = [k, i, j, l]  # 3124
-
-    for i in range(8):
-        print(i+1, ":", values[i])
+    one_bull_3_cows_array.append(convert_2_number(i,k,l,j))#1342
+    one_bull_3_cows_array.append(convert_2_number(i, l, j, k))#1423
+    one_bull_3_cows_array.append(convert_2_number(k,j,l,i))  #3241
+    one_bull_3_cows_array.append(convert_2_number(l,j,i,k)) #4213
+    one_bull_3_cows_array.append(convert_2_number(j,l,k,i)) #2431
+    one_bull_3_cows_array.append(convert_2_number(l,i,k,j))  #4132
+    one_bull_3_cows_array.append(convert_2_number(j, k, i, l))  # 2314
+    one_bull_3_cows_array.append(convert_2_number(k, i, j, l))  # 3124
+    print(one_bull_3_cows_array)
 
 
 def one_bull_one_cow(number):
