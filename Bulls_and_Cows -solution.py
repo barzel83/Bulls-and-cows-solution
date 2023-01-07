@@ -1347,32 +1347,109 @@ def four_cows(number):
 def two_bulls_one_cow(number):
     print(f"Options for 2 bulls and one cow for {number}: ")
     counter=1
-    values = [[],[],[],[],[],[]]
+    two_bulls_one_cow_array = []
     i=number[0]#1
     j=number[1]#2
     k=number[2]#3
     l=number[3]#4
 
-    for a in range(10):#124x
-        if a!=i and a!=j and a!=l:
-            print([i,j,l,a])
+    a=i
+    b=j
+    c=l
+    for d in range(10):#124x
+        if d!=a and d!=b and d!=c and d!=k:
+            two_bulls_one_cow_array.append(convert_2_number(a,b,c,d))
             counter+=1
 
-    for a in range(10):  # 12x4
-        if a != i and a != j and a != k:
-            print([i, j, a, k])
+    a=i
+    b=l
+    c=k
+    for d in range(10):  # 143x
+        if d!=a and d!=b and d!=c and d!=j:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
-    for a in range(10):  # 143x
-        if a != i and a !=l and a!=k:
-            print([i, l, k, a])
+    a=l
+    b=j
+    c=k
+    for d in range(10):  # 423x
+        if d!=a and d!=b and d!=c and d!=i:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
-    for a in range(10):  # 12x4
-        if a != i and a != j and a != l:
-            print([i, j, l, a])
+    a=i
+    b=j
+    d=k
+    for c in range(10):  # 12x3
+        if c != a and c != b and c != d and c!=l:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
+    a=i
+    b=k
+    d=l
+    for c in range(10):  # 13x4
+        if c != a and c != b and c != d  and c!=j:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    a=k
+    b=j
+    d=l
+    for c in range(10):  # 32x4
+        if c != a and c != b and c != d  and c!=i:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    a=i
+    c=j
+    d=l
+    for b in range(10):  # 1x24
+        if b != a and b != c and b != d  and b!=k:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    a=j
+    c=k
+    d=l
+    for b in range(10):  # 2x34
+        if b != a and b != c and b != d and b!=i:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    a=i
+    c=k
+    d=j
+    for b in range(10):  # 1x32
+        if b != a and b != c and b != d and b!=l:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    b=j
+    c=k
+    d=i
+    for a in range(10):  # x231
+        if a != b and a != c and a != d and a!=l:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    b=j
+    c=i
+    d=l
+    for a in range(10):  # x214
+        if a != b and a != c and a != d and a!=k:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    b=i
+    c=k
+    d=l
+    for a in range(10):  # x134
+        if a != b and a != c and a != d and a!=j:
+            two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
+            counter += 1
+
+    print(two_bulls_one_cow_array)
     print(f"There are {counter-1} in 2 bulls and one cow ")#72 units
 
 def bull_3_cows(number):
@@ -1624,10 +1701,10 @@ number=[1,2,3,4]
 #bull_3_cows(number)#8
 #four_cows(number)#9
 #three_bulls(number)#24
-#two_bulls_one_cow(number)#72
+two_bulls_one_cow(number)#72
 #two_bulls(number)#180
 #one_bull_two_cows(number)#216
-three_cows(number)#264
+#three_cows(number)#264
 #no_bulls_no_cows(number)#360
 #one_bull(number)#480
 #one_bull_one_cow(number)#720
