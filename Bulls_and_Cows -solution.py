@@ -1,3 +1,6 @@
+#contributor: Ilya Murychev
+#date: 07-01-2023
+#Solver for gaming in game "Bulls and Cows"
 
 def convert_2_number(a,b,c,d):
     return a*1000+b*100+c*10+d
