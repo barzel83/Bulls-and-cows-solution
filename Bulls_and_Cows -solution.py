@@ -1900,25 +1900,34 @@ def one_bull_one_cow(number):
     print(f"Total one bull and one cow {counter - 1} numbers")
     print(one_bull_one_cow_array)
 
+#begging
+function_dict = {'0b2c':two_cows, '0b3c':three_cows, '1b2c':one_bull_two_cows, '1b0c':one_bull, 'oboc':no_bulls_no_cows,
+                 '3b0c':three_bulls, '2b0c':two_bulls, '2b2c': two_bull_two_cows, '0b1c':one_cow, '0b4c':four_cows, '2b1c': two_bulls_one_cow,
+                 '1b3c':one_bull_3_cows, '1b1c':one_bull_one_cow}
+
+
 number1 = int(input("Step 1 :Input  4-digit number: "))
 convert_2_array(number1)
-number=convert_2_array(number1)
-step1 = one_cow(number)
+number = convert_2_array(number1)
+func = input('Input your operation: ')
+step1=function_dict[func](number)
 print("step1: ", len(step1))
 
 print("three_cows")
 number2 = int(input("Step 2 : Input  4-digit number: "))
 convert_2_array(number2)
 number=convert_2_array(number2)
-step2 = three_cows(number)
+func = input('Input your operation: ')
+#0b3c
+step2 = function_dict[func](number)
 common_step2 = intersection(step1, step2)
 print("Common elements of step2:", len(common_step2))
 
-print("one_cow")
 number3 = int(input("Step 3 :Input  4-digit number: "))
 convert_2_array(number3)
 number=convert_2_array(number3)
-step3=one_cow(number)
+func = input('Input your operation: ')
+step3=function_dict[func](number)
 common_step3 = intersection(common_step2, step3)
 if len(common_step3)<30:
     print("Common elements of step3 :", common_step3)
@@ -1927,7 +1936,9 @@ else:
 
 number4 = int(input("Step 4 :Input  4-digit number: "))
 convert_2_array(number4)
-step4=one_bull_two_cows(number4)
+number=convert_2_array(number4)
+func = input('Input your operation: ')
+step4=function_dict[func](number)
 common_step4 = intersection(common_step3, step4)
 if len(common_step4)<30:
     print("Common elements of step4 :", common_step4)
@@ -1936,22 +1947,11 @@ else:
 
 number5 = int(input("Step 5 :Input  4-digit number: "))
 convert_2_array(number5)
-step5=three_bulls(number5)
-print("step5:", step5)
+number=convert_2_array(number5)
+func = input('Input your operation: ')
+step5=function_dict[func](number)
 common_step5 = intersection(common_step4, step5)
 if len(common_step5)<30:
     print("Common elements of step5 :", common_step5)
 else:
     print("Common elements of step5 :", len(common_step5))
-
-#two_bulls_one_cow(number)#72
-#two_bulls(number)#180
-#one_bull_two_cows(number)#216
-#three_cows(number)#264
-#no_bulls_no_cows(number)#360
-#one_bull(number)#480
-#one_bull_one_cow(number)#720
-#two_cows(number)#1260
-#one_cow(number)#1440
-
-
