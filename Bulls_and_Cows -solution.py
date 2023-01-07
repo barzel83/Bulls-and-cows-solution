@@ -1493,8 +1493,9 @@ def bull_3_cows(number):
     for i in range(8):
         print(i+1, ":", values[i])
 
+
 def one_bull_one_cow(number):
-    array = [0] * 4
+    one_bull_one_cow_array = []
     i = number[0]  # 1
     j = number[1]  # 2
     k = number[2]  # 3
@@ -1508,7 +1509,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for d in range(10):
                 if d != b and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a,b,c,d))
                     counter += 1
 
     a = i
@@ -1517,7 +1519,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for c in range(10):
                 if c != b and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = i
@@ -1526,7 +1529,8 @@ def one_bull_one_cow(number):
         if c != i and c != j and c != k and c != l:
             for d in range(10):
                 if d != c and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = i
@@ -1535,7 +1539,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for c in range(10):
                 if c != b and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = i
@@ -1544,7 +1549,8 @@ def one_bull_one_cow(number):
         if c != i and c != j and c != k and c != l:
             for d in range(10):
                 if d != c and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = i
@@ -1553,7 +1559,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for d in range(10):
                 if d != b and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = j
@@ -1562,7 +1569,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for d in range(10):
                 if d != a and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = j
@@ -1571,7 +1579,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for c in range(10):
                 if c != a and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = k
@@ -1580,7 +1589,8 @@ def one_bull_one_cow(number):
         if c != i and c != j and c != k and c != l:
             for d in range(10):
                 if d != c and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = j
@@ -1589,7 +1599,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for c in range(10):
                 if c != a and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = l
@@ -1598,7 +1609,8 @@ def one_bull_one_cow(number):
         if c != i and c != j and c != k and c != l:
             for d in range(10):
                 if d != c and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = j
@@ -1607,7 +1619,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for d in range(10):
                 if d != a and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = i
@@ -1616,7 +1629,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for d in range(10):
                 if d != a and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     d = i
@@ -1625,7 +1639,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != a and b != i and b != j and b != k and b != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
     a = j
     c = k
@@ -1633,7 +1648,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for d in range(10):
                 if d != b and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
     d = j
     c = k
@@ -1641,7 +1657,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != a and b != i and b != j and b != k and b != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = l
@@ -1650,7 +1667,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for d in range(10):
                 if d != b and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
     b = l
     c = k
@@ -1658,7 +1676,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for d in range(10):
                 if d != a and d != i and d != j and d != k and d != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = i
@@ -1667,7 +1686,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for c in range(10):
                 if c != a and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                   # print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     c = i
@@ -1676,7 +1696,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != a and b != i and b != j and b != k and b != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
     a = j
     d = l
@@ -1684,7 +1705,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for c in range(10):
                 if c != b and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     c = j
@@ -1693,7 +1715,8 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for b in range(10):
                 if b != a and b != i and b != j and b != k and b != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                    #print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     a = k
@@ -1702,7 +1725,8 @@ def one_bull_one_cow(number):
         if b != i and b != j and b != k and b != l:
             for c in range(10):
                 if c != b and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                   # print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     b = k
@@ -1711,11 +1735,13 @@ def one_bull_one_cow(number):
         if a != i and a != j and a != k and a != l:
             for c in range(10):
                 if c != a and c != i and c != j and c != k and c != l:
-                    print(f"{counter}: {a}{b}{c}{d}")
+                   # print(f"{counter}: {a}{b}{c}{d}")
+                    one_bull_one_cow_array.append(convert_2_number(a, b, c, d))
                     counter += 1
 
     print(f"Total one bull and one cow {counter - 1} numbers")
-
+    print(one_bull_one_cow_array)
+    
 number=[1,2,3,4]
 #two_bull_two_cows(number)#6
 #bull_3_cows(number)#8
