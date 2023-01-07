@@ -1145,23 +1145,59 @@ def two_bulls(number):
 
 def two_bull_two_cows(number):
     print(f"Options for 2 bulls and 2 cows for {number}: ")
-    counter=1
-    values = [[],[],[],[],[],[]]
+    counter = 1
     i=number[0]#1
     j=number[1]#2
     k=number[2]#3
     l=number[3]#4
 
-    values[0]=[i,j,l,k]#1243
-    values[1]=[i,l,k,j]#1432
-    values[2]=[i,k,j,l]#1324
-    values[3]=[l,j,k,i]#4231
-    values[4]=[k,j,i,l]#3214
-    values[5]=[j,i,k,l]#2134
+    #[i,j,l,k]#1243
+    a=i
+    b=j
+    c=l
+    d=k
+    print(f"{counter}: {a}{b}{c}{d}")
 
-    for i in range(6):
-        print(i+1, ":", values[i])
+    #[i,l,k,j]#1432
+    a=i
+    b=l
+    c=k
+    d=j
+    counter+=1
+    print(f"{counter}: {a}{b}{c}{d}")
 
+    #[i,k,j,l]#1324
+    a=i
+    b=k
+    c=j
+    d=l
+    counter += 1
+    print(f"{counter}: {a}{b}{c}{d}")
+
+    #[l,j,k,i]#4231
+    a=l
+    b=j
+    c=k
+    d=i
+    counter += 1
+    print(f"{counter}: {a}{b}{c}{d}")
+
+    #[k,j,i,l]#3214
+    a=k
+    b=j
+    c=i
+    d=l
+    counter += 1
+    print(f"{counter}: {a}{b}{c}{d}")
+
+    #[j,i,k,l]#2134
+    a=j
+    b=i
+    c=k
+    d=l
+    counter += 1
+    print(f"{counter}: {a}{b}{c}{d}")
+    
 def one_cow(number):
     print(f"Options for 1 cow for {number}: ")
     counter=1
