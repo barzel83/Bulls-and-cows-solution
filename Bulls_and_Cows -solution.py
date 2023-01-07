@@ -1,6 +1,27 @@
+
 def convert_2_number(a,b,c,d):
     return a*1000+b*100+c*10+d
 
+def convert_2_array(number):
+    array=[]
+    #print(number)
+    d=number % 10
+    number  =number-d
+    number=number/10
+    c=int(number%10)
+    number=number-c
+    number=number/10
+    b=int(number%10)
+    number=number-b
+    number=number/10
+    a=int(number)
+
+    array = [a,b,c,d]
+    return array
+
+def intersection(arr1,arr2):
+    common_list = list(set(arr1).intersection(arr2))
+    return common_list
 
 def two_cows(number):
     i=number[0]
@@ -387,7 +408,6 @@ def two_cows(number):
     print(f"Total two cows {counter-1} numbers")
 
 def three_cows(number):
-    array=[0]*4
     i=number[0]#1
     j=number[1]#2
     k=number[2]#3
@@ -401,7 +421,7 @@ def three_cows(number):
     d=k
     for b in range(10):#4c x 2c 3c  
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
     a=l
@@ -409,7 +429,6 @@ def three_cows(number):
     d=j
     for b in range(10):#4c x 1c 2c  
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -418,7 +437,6 @@ def three_cows(number):
     d=i
     for b in range(10):#4c x 2c 1c  
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -427,7 +445,7 @@ def three_cows(number):
     d=k
     for b in range(10):#4c x 1c 3c  
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
     a=k
@@ -435,7 +453,7 @@ def three_cows(number):
     d=i
     for b in range(10):#3c x 2c 1c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -444,7 +462,7 @@ def three_cows(number):
     d=j
     for b in range(10):#3c x 1c 2c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
@@ -453,7 +471,7 @@ def three_cows(number):
     d=i
     for b in range(10):#3c x 4c 1c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -462,7 +480,7 @@ def three_cows(number):
     d=j
     for b in range(10):#3c x 4c 2c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -471,7 +489,7 @@ def three_cows(number):
     d=k
     for b in range(10):#2c x 4c 3c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -480,7 +498,7 @@ def three_cows(number):
     d=i
     for b in range(10):#2c x 4c 1c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
@@ -489,7 +507,7 @@ def three_cows(number):
     d=k
     for b in range(10):#2c x 1c 3c 
         if b!=i and b!=j and b!=k and b!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -498,7 +516,7 @@ def three_cows(number):
     d=k
     for a in range(10):#x 1c 2c 3c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -507,7 +525,7 @@ def three_cows(number):
     d=k
     for a in range(10):#x 1c 4c 3c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
@@ -516,7 +534,7 @@ def three_cows(number):
     d=i
     for a in range(10):#x 3c 4c 1c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -525,7 +543,7 @@ def three_cows(number):
     d=k
     for a in range(10):#x 4c 1c 3c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -534,7 +552,7 @@ def three_cows(number):
     d=j
     for a in range(10):#x 4c 1c 2c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
@@ -543,7 +561,7 @@ def three_cows(number):
     d=i
     for a in range(10):#x 3c 2c 1c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
     b=k
@@ -551,7 +569,7 @@ def three_cows(number):
     d=j
     for a in range(10):#x 3c 4c 2c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -560,7 +578,7 @@ def three_cows(number):
     d=j
     for a in range(10):#x 1c 4c 2c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
@@ -569,7 +587,7 @@ def three_cows(number):
     d=k
     for a in range(10):#x 4c 2c 3c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
     b=l
@@ -577,7 +595,7 @@ def three_cows(number):
     d=i
     for a in range(10):#x 4c 2c 1c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -586,7 +604,7 @@ def three_cows(number):
     d=j
     for a in range(10):#x 3c 1c 2c 
         if a!=i and a!=j and a!=k and a!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -595,7 +613,7 @@ def three_cows(number):
     d=k
     for c in range(10):#4c 1c x 3c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -604,7 +622,7 @@ def three_cows(number):
     d=i
     for c in range(10):#4c 3c x 1c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -613,7 +631,7 @@ def three_cows(number):
     d=j
     for c in range(10):#4c 3c x 2c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -622,7 +640,7 @@ def three_cows(number):
     d=j
     for c in range(10):#4c 1c x 2c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -631,7 +649,7 @@ def three_cows(number):
     d=j
     for c in range(10):#3c 4c x 2c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -640,7 +658,7 @@ def three_cows(number):
     d=i
     for c in range(10):#3c 4c x 1c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -649,7 +667,7 @@ def three_cows(number):
     d=j
     for c in range(10):#3c 1c x 2c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -658,7 +676,7 @@ def three_cows(number):
     d=i
     for c in range(10):#2c 4c x 1c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -667,7 +685,7 @@ def three_cows(number):
     d=k
     for c in range(10):#2c 4c x 3c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -676,7 +694,7 @@ def three_cows(number):
     d=k
     for c in range(10):#2c 1c x 3c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -685,7 +703,7 @@ def three_cows(number):
     d=i
     for c in range(10):#2c 3c x 1c 
         if c!=i and c!=j and c!=k and c!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -694,7 +712,7 @@ def three_cows(number):
     c=j
     for d in range(10):#4c 1c 2c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
@@ -703,7 +721,7 @@ def three_cows(number):
     c=i
     for d in range(10):#4c 3c 1c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -712,7 +730,7 @@ def three_cows(number):
     c=j
     for d in range(10):#4c 3c 2c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -721,7 +739,7 @@ def three_cows(number):
     c=l
     for d in range(10):#3c 1c 4c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -730,7 +748,7 @@ def three_cows(number):
     c=j
     for d in range(10):#3c 4c 2c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -739,7 +757,7 @@ def three_cows(number):
     c=i
     for d in range(10):#3c 4c 1c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -748,7 +766,7 @@ def three_cows(number):
     c=j
     for d in range(10):#3c 1c 2c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -757,7 +775,7 @@ def three_cows(number):
     c=i
     for d in range(10):#2c 3c 1c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -766,7 +784,7 @@ def three_cows(number):
     c=l
     for d in range(10):#2c 1c 4c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -775,7 +793,7 @@ def three_cows(number):
     c=l
     for d in range(10):#2c 3c 4c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
 
@@ -784,12 +802,12 @@ def three_cows(number):
     c=i
     for d in range(10):#2c 4c 1c x  
         if d!=i and d!=j and d!=k and d!=l:
-                    print(f"{counter}: {a}{b}{c}{d}" )
+
                     three_cows_array.append(convert_2_number(a, b, c, d))
                     counter+=1
                     
     print(f"Total three cows {counter-1} numbers")
-    print(three_cows_array)
+    return three_cows_array
 
 def one_bull_two_cows(number):
     i = number[0]  # 1
@@ -805,7 +823,7 @@ def one_bull_two_cows(number):
     c = j
     for d in range(10):  # 1b 3c2cx
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a,b,c,d))
             counter += 1
 
@@ -814,7 +832,7 @@ def one_bull_two_cows(number):
     d = j
     for c in range(10):  # 1b 3cx2c
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -823,7 +841,7 @@ def one_bull_two_cows(number):
     d = k
     for b in range(10):  # 1b x2c3c
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -832,7 +850,7 @@ def one_bull_two_cows(number):
     c = j
     for d in range(10):  # 1b 4c2cx
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -841,7 +859,7 @@ def one_bull_two_cows(number):
     d = j
     for c in range(10):  # 1b 4cx2c
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -850,7 +868,7 @@ def one_bull_two_cows(number):
     d = j
     for b in range(10):  # 1b x4c2c
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -859,7 +877,7 @@ def one_bull_two_cows(number):
     d = k
     for b in range(10):  # 1b x4c3c
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -868,7 +886,7 @@ def one_bull_two_cows(number):
     c = l
     for d in range(10):  # 1b 3c4cx
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -877,7 +895,7 @@ def one_bull_two_cows(number):
     d = k
     for c in range(10):  # 1b 4cx3c
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -886,7 +904,7 @@ def one_bull_two_cows(number):
     d = k
     for a in range(10):  # x 2b 1c3c
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -895,7 +913,7 @@ def one_bull_two_cows(number):
     d = i
     for a in range(10):  # x 2b 4c 1c
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -904,7 +922,7 @@ def one_bull_two_cows(number):
     d = k
     for a in range(10):  # x 2b 4c 3c
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -913,7 +931,7 @@ def one_bull_two_cows(number):
     d = i
     for c in range(10):  # 3c 2b x 1c
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -922,7 +940,7 @@ def one_bull_two_cows(number):
     d = k
     for c in range(10):  # 4c 2b x 3c
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -931,7 +949,7 @@ def one_bull_two_cows(number):
     d = i
     for c in range(10):  # 4c 2b x 1c
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -940,7 +958,7 @@ def one_bull_two_cows(number):
     c = i
     for d in range(10):  # 3c 2b 1c x
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -949,7 +967,7 @@ def one_bull_two_cows(number):
     c = l
     for d in range(10):  # 3c 2b 4c x
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -958,7 +976,7 @@ def one_bull_two_cows(number):
     c = i
     for d in range(10):  # 4c 2b 1c x
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -967,7 +985,7 @@ def one_bull_two_cows(number):
     c = k
     for d in range(10):  # 2с 4c 3b x
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -976,7 +994,7 @@ def one_bull_two_cows(number):
     c = k
     for d in range(10):  # 4с 1c 3b x
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -985,7 +1003,7 @@ def one_bull_two_cows(number):
     c = k
     for d in range(10):  # 2с 4c 3b x
         if d != i and d != j and d != k and d != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -994,7 +1012,7 @@ def one_bull_two_cows(number):
     d = j
     for a in range(10):  # x 1с 3b 2c
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1003,7 +1021,7 @@ def one_bull_two_cows(number):
     d = i
     for a in range(10):  # x 4с 3b 1c
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1012,7 +1030,7 @@ def one_bull_two_cows(number):
     d = j
     for a in range(10):  # x 4с 3b 2c
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1021,7 +1039,7 @@ def one_bull_two_cows(number):
     d = i
     for b in range(10):  # 2c x 3b 1c
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1030,7 +1048,7 @@ def one_bull_two_cows(number):
     d = j
     for b in range(10):  # 4c x 3b 2c
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1039,7 +1057,7 @@ def one_bull_two_cows(number):
     d = i
     for b in range(10):  # 4c x 3b 1c
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1048,7 +1066,7 @@ def one_bull_two_cows(number):
     d = l
     for a in range(10):  # x 1c2c 4b
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1057,7 +1075,7 @@ def one_bull_two_cows(number):
     d = l
     for a in range(10):  # x 3c 1c 4b
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1066,7 +1084,7 @@ def one_bull_two_cows(number):
     d = l
     for a in range(10):  # x 3c 2c 4b
         if a != i and a != j and a != k and a != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1075,7 +1093,7 @@ def one_bull_two_cows(number):
     d = l
     for b in range(10):  # 2c x 1c 4b
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1084,7 +1102,7 @@ def one_bull_two_cows(number):
     d = l
     for b in range(10):  # 3c x 1c 4b
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1093,7 +1111,7 @@ def one_bull_two_cows(number):
     d = l
     for b in range(10):  # 3c x 2c 4b
         if b != i and b != j and b != k and b != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1102,7 +1120,7 @@ def one_bull_two_cows(number):
     d = l
     for c in range(10):  # 2c 1c x 4b
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1111,7 +1129,7 @@ def one_bull_two_cows(number):
     d = l
     for c in range(10):  # 3c 1c x 4b
         if c != i and c != j and c != k and c != l:
-            print(f"{counter}: {a}{b}{c}{d}")
+
             one_bull_two_cows_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
@@ -1125,7 +1143,7 @@ def one_bull_two_cows(number):
             counter += 1
 
     print(f"Total one bull and two cows {counter - 1} numbers")
-    print(one_bull_two_cows_array)
+    return one_bull_two_cows_array
 
 def one_bull(number):
     i=number[0]
@@ -1222,8 +1240,9 @@ def three_bulls(number):
                 #print("#", counter, ": ", array)
                 three_bulls_array.append(convert_2_number(array[0], array[1], array[2], array[3]))
                 counter+=1
-    print(f"3 bulls: there are {counter-1} numbers")#24
-    print(three_bulls_array)
+    #print(f"3 bulls: there are {counter-1} numbers")#24
+    # print(three_bulls_array)
+    return three_bulls_array
 
 def two_bulls(number):
     print(f"Options for 2 bulls for {number}: ")
@@ -1336,8 +1355,9 @@ def two_bull_two_cows(number):
     two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
     counter += 1
 
-    print("two_bull_two_cows_array: ", two_bull_two_cows_array)
-    print(f"Total two bulls and two cows {counter} numbers")
+    #print("two_bull_two_cows_array: ", two_bull_two_cows_array)
+    #print(f"Total two bulls and two cows {counter} numbers")
+    return two_bull_two_cows_array
     #print(f"{counter}: {a}{b}{c}{d}")
 
 def one_cow(number):
@@ -1358,7 +1378,7 @@ def one_cow(number):
                             #print(j,a,b,c )
                             one_cow_array.append(convert_2_number(j,a,b,c))
                             counter+=1
-    print(f"{counter}")
+
 
     for a in range(10):#cow digit1 from place3
         if a!=i and a!=j and a!=k and a!=l:
@@ -1472,7 +1492,7 @@ def one_cow(number):
                             one_cow_array.append(convert_2_number(a, b, c,k))
                             counter+=1
     print(f"There are {counter-1} one cow combination ")#1440 units
-    print(len(one_cow_array))
+    return one_cow_array
 
 def four_cows(number):
     print(f"Options for 4 cows for {number}: ")
@@ -1500,8 +1520,9 @@ def four_cows(number):
                                 four_cows_array.append(convert_2_number(a,b,c,d))
                                 counter+=1
 
-    print(f"4 cows: there are  {counter -1} numbers")#9
-    print(four_cows_array)
+    #print(f"4 cows: there are  {counter -1} numbers")#9
+    #print(four_cows_array)
+    return four_cows_array
 
 def two_bulls_one_cow(number):
     print(f"Options for 2 bulls and one cow for {number}: ")
@@ -1608,8 +1629,8 @@ def two_bulls_one_cow(number):
             two_bulls_one_cow_array.append(convert_2_number(a, b, c, d))
             counter += 1
 
-    print(two_bulls_one_cow_array)
-    print(f"There are {counter-1} in 2 bulls and one cow ")#72 units
+    return two_bulls_one_cow_array
+    #print(f"There are {counter-1} in 2 bulls and one cow ")#72 units
 
 def one_bull_3_cows(number):
     print(f"Options for one bull and 3 cows for {number}: ")
@@ -1628,7 +1649,8 @@ def one_bull_3_cows(number):
     one_bull_3_cows_array.append(convert_2_number(l,i,k,j))  #4132
     one_bull_3_cows_array.append(convert_2_number(j, k, i, l))  # 2314
     one_bull_3_cows_array.append(convert_2_number(k, i, j, l))  # 3124
-    print(one_bull_3_cows_array)
+    #print(one_bull_3_cows_array)
+    return one_bull_3_cows_array
 
 def one_bull_one_cow(number):
     one_bull_one_cow_array = []
@@ -1878,17 +1900,58 @@ def one_bull_one_cow(number):
     print(f"Total one bull and one cow {counter - 1} numbers")
     print(one_bull_one_cow_array)
 
-number=[1,2,3,4]
-#two_bull_two_cows(number)#6
-#one_bull_3_cows(number)#8
-#four_cows(number)#9
-#three_bulls(number)#24
+number1 = int(input("Step 1 :Input  4-digit number: "))
+convert_2_array(number1)
+number=convert_2_array(number1)
+step1 = one_cow(number)
+print("step1: ", len(step1))
+
+print("three_cows")
+number2 = int(input("Step 2 : Input  4-digit number: "))
+convert_2_array(number2)
+number=convert_2_array(number2)
+step2 = three_cows(number)
+common_step2 = intersection(step1, step2)
+print("Common elements of step2:", len(common_step2))
+
+print("one_cow")
+number3 = int(input("Step 3 :Input  4-digit number: "))
+convert_2_array(number3)
+number=convert_2_array(number3)
+step3=one_cow(number)
+common_step3 = intersection(common_step2, step3)
+if len(common_step3)<30:
+    print("Common elements of step3 :", common_step3)
+else:
+    print("Common elements of step3 :", len(common_step3))
+
+number4 = int(input("Step 4 :Input  4-digit number: "))
+convert_2_array(number4)
+step4=one_bull_two_cows(number4)
+common_step4 = intersection(common_step3, step4)
+if len(common_step4)<30:
+    print("Common elements of step4 :", common_step4)
+else:
+    print("Common elements of step4 :", len(common_step4))
+
+number5 = int(input("Step 5 :Input  4-digit number: "))
+convert_2_array(number5)
+step5=three_bulls(number5)
+print("step5:", step5)
+common_step5 = intersection(common_step4, step5)
+if len(common_step5)<30:
+    print("Common elements of step5 :", common_step5)
+else:
+    print("Common elements of step5 :", len(common_step5))
+
 #two_bulls_one_cow(number)#72
 #two_bulls(number)#180
 #one_bull_two_cows(number)#216
 #three_cows(number)#264
-no_bulls_no_cows(number)#360
+#no_bulls_no_cows(number)#360
 #one_bull(number)#480
 #one_bull_one_cow(number)#720
 #two_cows(number)#1260
 #one_cow(number)#1440
+
+
