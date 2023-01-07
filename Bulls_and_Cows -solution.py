@@ -406,6 +406,7 @@ def two_cows(number):
                     counter+=1
                     
     print(f"Total two cows {counter-1} numbers")
+    return two_cows_array
 
 def three_cows(number):
     i=number[0]#1
@@ -1219,7 +1220,7 @@ def no_bulls_no_cows(number):
                                     no_bulls_no_cows_array.append(convert_2_number(a,b,c,d))
                                     counter+=1
     print(f"Total no bulls and cows {counter-1} numbers")#360
-    print(no_bulls_no_cows_array)
+    return no_bulls_no_cows_array
 
 def three_bulls(number):
     print(f"Options for 3 bulls for {number}: ")
@@ -1898,10 +1899,10 @@ def one_bull_one_cow(number):
                     counter += 1
 
     print(f"Total one bull and one cow {counter - 1} numbers")
-    print(one_bull_one_cow_array)
+    return one_bull_one_cow_array
 
 #begging
-function_dict = {'0b2c':two_cows, '0b3c':three_cows, '1b2c':one_bull_two_cows, '1b0c':one_bull, 'oboc':no_bulls_no_cows,
+function_dict = {'0b2c':two_cows, '0b3c':three_cows, '1b2c':one_bull_two_cows, '1b0c':one_bull, '0b0c':no_bulls_no_cows,
                  '3b0c':three_bulls, '2b0c':two_bulls, '2b2c': two_bull_two_cows, '0b1c':one_cow, '0b4c':four_cows, '2b1c': two_bulls_one_cow,
                  '1b3c':one_bull_3_cows, '1b1c':one_bull_one_cow}
 
