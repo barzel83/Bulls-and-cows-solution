@@ -1144,7 +1144,8 @@ def two_bulls(number):
 
 def two_bull_two_cows(number):
     print(f"Options for 2 bulls and 2 cows for {number}: ")
-    counter = 1
+    two_bull_two_cows_array = []
+    counter = 0
     i=number[0]#1
     j=number[1]#2
     k=number[2]#3
@@ -1155,48 +1156,52 @@ def two_bull_two_cows(number):
     b=j
     c=l
     d=k
-    print(f"{counter}: {a}{b}{c}{d}")
+    two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
+    counter+=1
 
     #[i,l,k,j]#1432
     a=i
     b=l
     c=k
     d=j
+    two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
     counter+=1
-    print(f"{counter}: {a}{b}{c}{d}")
 
     #[i,k,j,l]#1324
     a=i
     b=k
     c=j
     d=l
+    two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
     counter += 1
-    print(f"{counter}: {a}{b}{c}{d}")
 
     #[l,j,k,i]#4231
     a=l
     b=j
     c=k
     d=i
+    two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
     counter += 1
-    print(f"{counter}: {a}{b}{c}{d}")
 
     #[k,j,i,l]#3214
     a=k
     b=j
     c=i
     d=l
+    two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
     counter += 1
-    print(f"{counter}: {a}{b}{c}{d}")
 
     #[j,i,k,l]#2134
     a=j
     b=i
     c=k
     d=l
+    two_bull_two_cows_array.append(convert_2_number(a, b, c, d))
     counter += 1
-    print(f"{counter}: {a}{b}{c}{d}")
-    
+
+    print("two_bull_two_cows_array: ", two_bull_two_cows_array)
+    print(f"Total two bulls and two cows {counter} numbers")
+   
 def one_cow(number):
     print(f"Options for 1 cow for {number}: ")
     counter=1
